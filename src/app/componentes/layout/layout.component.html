@@ -1,0 +1,53 @@
+<main class="w-full flex-col items-center bg-gray-100 min-h-screen flex p-0 pt-12  flex  m-0 ">
+  <div class="max-w-[1024px]" *ngIf="showInfo">
+    <div class="flex my-5 text-sm font-semibold items-center text-gray-800">
+      <div class="flex-grow border-t border-purple-200 h-px mr-3"></div>
+      <span class="bg-purple-200 rounded-full p-1.5">Informações</span>
+      <div class="flex-grow border-t border-purple-200 h-px ml-3"></div>
+    </div>
+    <div class="grid gap-6 mb-0 grid-cols-2">
+      <div class="bg-white p-3 rounded shadow">
+        <h4 class="font-bold text-black">Nome/Tag componente</h4>
+        <p>Tag do component: <strong>< {{tagElement}} ></strong>
+        </p>
+      </div>
+
+      <div class="bg-white p-3 rounded shadow">
+        <h4 class="font-bold text-black">Usuario Github</h4>
+        <p>{{linkGithub}}</p>
+      </div>
+    </div>
+    <div class="flex my-5 text-sm font-semibold items-center text-gray-800">
+      <div class="flex-grow border-t border-purple-200 h-px mr-3"></div>
+      <span class="bg-purple-200 rounded-full p-1.5">Seguir</span>
+      <div class="flex-grow border-t border-purple-200 h-px ml-3"></div>
+    </div>
+    <div class="grid gap-6 mb-0 grid-cols-2">
+      <div class="bg-white p-3 rounded shadow">
+        <h4 class="font-bold text-black">CSS</h4>
+        Usar variáveis do CSS no componente o melhor que puder
+      </div>
+
+      <div class="bg-white p-3 rounded shadow">
+        <h4 class="font-bold text-black">Angular</h4>
+        O componente tem que ser <strong>standalone</strong>, ou seja, não pode depender de nada externo.
+      </div>
+
+      <div class="bg-white p-3 rounded shadow">
+        <h4 class="font-bold text-black">Reuso</h4>
+        O componente sera usado por outras squads também, então pense em reuso.
+      </div>
+    </div>
+    <div class="flex my-8 text-sm font-semibold items-center text-gray-800">
+      <div class="flex-grow border-t border-purple-200 h-px mr-3"></div>
+      <span class="bg-purple-200 rounded-full p-1.5">Component exemplo</span>
+      <div class="flex-grow border-t border-purple-200 h-px ml-3"></div>
+    </div>
+   
+  </div>
+  <div class="max-w-[1024px]">
+    <div class="w-full bg-white min-h-[15vh] rounded shadow p-3">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</main>
