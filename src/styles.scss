@@ -1,3 +1,44 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+
+:root {
+  --fnx-color-brand-main01: #FF8200;
+  --fnx-color-brand-main02: #50555A;
+  --fnx-color-digital-primary-extralight: #FFF0E4;
+  --fnx-color-digital-primary-lightest: #FFB578;
+  --fnx-color-digital-primary-light: #FF8826;
+  --fnx-color-digital-primary-medium: #EF6C00;
+  --fnx-color-digital-primary-dark: #BF5600;
+  --fnx-color-digital-primary-darkest: #8F4100;
+  --fnx-color-digital-primary-extradark: #602B00;
+  --fnx-color-digital-secondary01-extralight: #ECDFF0;
+  --fnx-color-digital-secondary01-lightest: #C69ED3;
+  --fnx-color-digital-secondary01-light: #AA6EBC;
+  --fnx-color-digital-secondary01-medium: #A05EB5;
+  --fnx-color-digital-secondary01-dark: #844597;
+  --fnx-color-digital-secondary01-darkest: #633471;
+  --fnx-color-digital-secondary01-extradark: #42234B;
+  --fnx-color-digital-secondary02-extralight: #DCFFFB;
+  --fnx-color-digital-secondary02-lightest: #00E7CD;
+  --fnx-color-digital-secondary02-light: #00C4AE;
+  --fnx-color-digital-secondary02-medium: #00A18F;
+  --fnx-color-digital-secondary02-dark: #008172;
+  --fnx-color-digital-secondary02-darkest: #006156;
+  --fnx-color-digital-secondary02-extradark: #004039;
+  --fnx-color-digital-secondary03-extralight: #E1E9F5;
+  --fnx-color-digital-secondary03-lightest: #A6BCE0;
+  --fnx-color-digital-secondary03-light: #799BD1;
+  --fnx-color-digital-secondary03-medium: #6A90CC;
+  --fnx-color-digital-secondary03-dark: #3F6EB9;
+  --fnx-color-digital-secondary03-darkest: #2F538B;
+  --fnx-color-digital-secondary03-extradark: #20375C;
+  --fnx-color-digital-grayscale-extralight: #FCFCFC;
+  --fnx-color-digital-grayscale-lightest: #DBDDDF;
+  --fnx-color-digital-grayscale-light: #B7BBBF;
+  --fnx-color-digital-grayscale-medium: #93999F;
+  --fnx-color-digital-grayscale-dark: #6D747A;
+  --fnx-color-digital-grayscale-darkest: #50555A;
+  --fnx-color-digital-grayscale-extradark: #080809;
+}
