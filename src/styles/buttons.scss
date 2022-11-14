@@ -1,0 +1,176 @@
+button.btn,
+a.btn {
+  --btn-size: 16px;
+  --btn-min-h: 48px;
+  --btn-radius: 8px;
+  --btn-padding: 8px 16px;
+  --btn-gap: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--btn-size, 14px);
+  gap: var(--btn-gap, 8px);
+  transition: all 300ms ease;
+  position: relative;
+  border: none;
+  border-radius: var(--btn-radius);
+  overflow: hidden;
+  width: fit-content;
+  letter-spacing: 1.1px;
+  min-height: var(--btn-min-h);
+  cursor: pointer;
+  padding: var(--btn-padding);
+  transition: width 300ms ease-in-out, background-color 100ms ease-in-out;
+  &:not([class*=" bg-"]) {
+    background-color: var(--bgBtn);
+    color: var(--textBtn);
+  }
+  &:disabled {
+    pointer-events: none;
+    color: #acafb1;
+    background-color: var(--fnx-color-digital-grayscale-lightest);
+  }
+  &:not([class*=" btn-loading"]) {
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 0px;
+      width: 100%;
+      background-color: black;
+      filter: contrast(100px);
+      opacity: 0.1;
+      transition: all 300ms ease;
+    }
+  }
+  &.btn-primary {
+    --bgBtn: var(--fnx-color-digital-primary-dark);
+    --textBtn: var(--fnx-color-digital-primary-extralight);
+    &:hover:not(.btn-outline) {
+      --bgBtn: var(--fnx-color-digital-primary-extralight);
+      --textBtn: var(--fnx-color-digital-primary-darkest);
+    }
+    &:active:not(.btn-outline) {
+      --bgBtn: var(--fnx-color-digital-primary-lightest);
+      --textBtn: var(--fnx-color-digital-primary-darkest);
+    }
+    &.btn-outline {
+      background-color: transparent;
+      --textBtn: var(--fnx-color-digital-primary-darkest);
+      &:hover {
+        background-color: var(--fnx-color-digital-primary-extralight);
+      }
+      &:active {
+        background-color: var(--fnx-color-digital-primary-lightest);
+      }
+    }
+  }
+  &.btn-secondary {
+    --bgBtn: var(--fnx-color-digital-secondary01-dark);
+    --textBtn: var(--fnx-color-digital-secondary01-extralight);
+    &:hover:not(.btn-outline) {
+      --bgBtn: var(--fnx-color-digital-secondary01-extralight);
+      --textBtn: var(--fnx-color-digital-secondary01-darkest);
+    }
+    &:active:not(.btn-outline) {
+      --bgBtn: var(--fnx-color-digital-secondary01-lightest);
+      --textBtn: var(--fnx-color-digital-secondary01-darkest);
+    }
+    &.btn-outline {
+      background-color: transparent;
+      --textBtn: var(--fnx-color-digital-secondary01-darkest);
+      &:hover {
+        background-color: var(--fnx-color-digital-secondary01-extralight);
+      }
+      &:active {
+        background-color: var(--fnx-color-digital-secondary01-lightest);
+      }
+    }
+  }
+  &.btn-secondary-2 {
+    --bgBtn: var(--fnx-color-digital-secondary02-dark);
+    --textBtn: var(--fnx-color-digital-secondary02-extralight);
+    &:hover:not(.btn-outline) {
+      --bgBtn: var(--fnx-color-digital-secondary02-extralight);
+      --textBtn: var(--fnx-color-digital-secondary02-darkest);
+    }
+    &:active:not(.btn-outline) {
+      --bgBtn: var(--fnx-color-digital-secondary02-lightest);
+      --textBtn: var(--fnx-color-digital-secondary02-darkest);
+    }
+    &.btn-outline {
+      background-color: transparent;
+      --textBtn: var(--fnx-color-digital-secondary02-darkest);
+      &:hover {
+        background-color: var(--fnx-color-digital-secondary02-extralight);
+      }
+      &:active {
+        background-color: var(--fnx-color-digital-secondary02-extralight);
+      }
+    }
+  }
+  &.btn-link {
+    background-color: transparent;
+    --textBtn: var(--fnx-color-digital-secondary03-dark);
+    &:hover:not(.btn-outline) {
+      --textBtn: var(--fnx-color-digital-secondary03-darkest);
+      border-bottom: 1px solid var(--fnx-color-digital-secondary03-dark);
+      border-radius: 0;
+    }
+    &:active:not(.btn-outline) {
+      --bgBtn: var(--fnx-color-digital-secondary03-darkest);
+      --textBtn: var(--fnx-color-digital-secondary03-dark);
+    }
+    &.btn-outline {
+      border: 0px solid transparent;
+    }
+  }
+  //// tamanhos
+  &.btn-md {
+    --btn-min-h: 40px;
+  }
+  &.btn-sm {
+    --btn-min-h: 32px;
+    --btn-padding: 4px 16px;
+  }
+  /// Outline
+  &.btn-outline {
+    border: 2px solid var(--bgBtn);
+    &:disabled {
+      background-color: transparent;
+      --textBtn: var(--fnx-color-digital-grayscale-extralight);
+      --bgBtn: var(--fnx-color-digital-grayscale-dark);
+    }
+  }
+  /// Basico
+  &.btn-basic:not(:hover, :active) {
+    --textBtn: var(--bgBtn);
+    background-color: transparent;
+  }
+
+  &.btn-loading {
+    position: relative;
+    overflow: hidden;
+    pointer-events: none;
+    cursor: none;
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+    }
+    &:before {
+      content: "";
+      background-color: rgba(33, 29, 29, 0.15);
+      animation: loadingButton 2s ease infinite;
+      z-index: 22;
+      @keyframes loadingButton {
+        to {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

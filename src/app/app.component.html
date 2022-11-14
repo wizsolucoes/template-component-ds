@@ -3,5 +3,241 @@
   link-usuario-github="github.com/raulmelo"
   [showInfo]="true"
 >
-  Adicionar seu component aqui
+
+<div class="max-w-full">
+  <div class="w-full block">
+    <h2>Botão simples</h2>
+  </div>
+  <div class="grid grid-flow-col gap-8 auto-cols-max">
+    <div>
+      <small class="opacit-24 block">primário</small>
+      <button class="btn btn-primary">
+        <span class="material-icons">add</span>
+        Enviar
+      </button>
+    </div>
+    <div>
+      <small class="opacit-24 block">Secundário</small>
+      <button class="btn btn-secondary">
+        <span class="material-icons">add</span>
+        Enviar
+      </button>
+    </div>
+    <div>
+      <small class="opacit-24 block">Secundário 2</small>
+      <button class="btn btn-secondary-2">
+        <span class="material-icons">add</span>
+        Enviar
+      </button>
+    </div>
+    <div>
+      <small class="opacit-24 block">Desabilitado</small>
+      <button disabled class="btn btn-primary">
+        <span class="material-icons">add</span>
+        Enviar
+      </button>
+    </div>
+  </div>
+
+
+
+
+<!-- sem ícones  -->
+  <div class="w-full mt-12 block">
+    <h2>Botão simples sem ícone</h2>
+  </div>
+  <div class="grid grid-flow-col gap-8 auto-cols-max">
+    <div>
+      <small class="opacit-24 block">primário</small>
+      <button class="btn btn-primary">
+        Enviar
+      </button>
+    </div>
+    <div>
+      <small class="opacit-24 block">Secundário</small>
+      <button class="btn btn-secondary">
+        Enviar
+      </button>
+    </div>
+    <div>
+      <small class="opacit-24 block">Secundário 2</small>
+      <button class="btn btn-secondary-2">
+        Enviar
+      </button>
+    </div>
+    <div>
+      <small class="opacit-24 block">Desabilitado</small>
+      <button disabled class="btn btn-primary">
+        Enviar
+      </button>
+    </div>
+  </div>
+
+
+
+<!-- Tamanhos  -->
+<div class="w-full mt-12 block">
+  <h2>Botão tamanhos</h2>
+  <div class="grid grid-flow-col gap-8 auto-cols-max">
+    <div>
+      <small class="opacit-24 block">normal/large</small>
+      <button class="btn btn-primary">
+        <span class="material-icons">add</span>
+        Enviar
+      </button>
+    </div>
+    <div>
+      <small class="opacit-24 block">medium</small>
+      <button class="btn btn-primary btn-md">
+        <span class="material-icons">add</span>
+        Enviar
+      </button>
+    </div>
+    <div>
+      <small class="opacit-24 block">small</small>
+      <button class="btn btn-primary btn-sm">
+        <span class="material-icons">add</span>
+        Enviar
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Tamanhos  -->
+<div class="w-full mt-12 block">
+  <h2>Botão outline</h2>
+  <div class="grid grid-flow-col gap-8 auto-cols-max">
+    <div>
+      <small class="opacit-24 block">outline primary</small>
+      <button class="btn btn-primary btn-outline">
+        <span class="material-icons">add</span>
+        Enviar
+      </button>
+    </div>
+    <div>
+      <small class="opacit-24 block">outline secondary</small>
+      <button class="btn btn-secondary btn-outline">
+        <span class="material-icons">add</span>
+        Enviar
+      </button>
+    </div>
+    <div>
+      <small class="opacit-24 block">outline secondary 02</small>
+      <button class="btn btn-secondary-2 btn-outline">
+        <span class="material-icons">add</span>
+        Enviar
+      </button>
+    </div>
+    <div>
+      <small class="opacit-24 block">outline disabled</small>
+      <button disabled class="btn btn-primary btn-outline">
+        <span class="material-icons">add</span>
+        Enviar
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Basico  -->
+<div class="w-full mt-12 block">
+  <h2>Botão básico</h2>
+  <div class="grid grid-flow-col gap-8 auto-cols-max">
+    <div>
+      <small class="opacit-24 block">basic primary</small>
+      <button class="btn btn-primary  btn-basic">
+        <span class="material-icons">add</span>
+        Enviar
+      </button>
+    </div>
+    <div>
+      <small class="opacit-24 block">basic secondary</small>
+      <button class="btn btn-secondary btn-basic">
+        <span class="material-icons">add</span>
+        Enviar
+      </button>
+    </div>
+    <div>
+      <small class="opacit-24 block">basic secondary 02</small>
+      <button class="btn btn-secondary-2 btn-basic">
+        <span class="material-icons">add</span>
+        Enviar
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Basico  -->
+<div class="w-full mt-12 block">
+  <h2>Botão básico</h2>
+  <div class="grid grid-flow-col gap-8 auto-cols-max">
+    <div>
+      <small class="opacit-24 block">basic primary</small>
+      <button class="btn btn-primary  btn-loading">
+        <span class="material-icons">add</span>
+        Enviar
+      </button>
+    </div>
+    <div>
+      <small (click)="toggle()" class="opacit-24 block">basic secondary</small>
+      <button  [ngClass]="{'btn-loading': active}" class="btn btn-secondary" data-loading="perai">
+        <span class="material-icons">add</span>
+        Enviar
+      </button>
+    </div>
+    <div>
+      <small class="opacit-24 block">basic secondary 02</small>
+      <button class="btn btn-secondary-2 btn-loading">
+        <span class="material-icons">add</span>
+        Enviar
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Basico  -->
+<div class="w-full mt-12 block">
+  <h2>Botão Link</h2>
+  <div class="grid grid-flow-col gap-8 auto-cols-max">
+    <div>
+      <small class="opacit-24 block">Link + icon</small>
+      <button class="btn btn-primary btn-link">
+        <span class="material-icons">add</span>
+        Link
+      </button>
+    </div>
+    <div>
+      <small class="opacit-24 block">basic secondary</small>
+      <button  class="btn btn-secondary btn-link btn-outline">
+        <span class="material-icons">add</span>
+        Enviar
+      </button>
+    </div>
+    <div>
+      <small class="opacit-24 block">basic secondary 02</small>
+      <button class="btn btn-secondary-2 btn-link">
+        <span class="material-icons">add</span>
+        Enviar
+      </button>
+    </div>
+    <div>
+      <small class="opacit-24 block">basic secondary 02</small>
+      <button disabled class="btn btn-secondary-2 btn-link">
+        Enviar
+        <span class="material-icons">add</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+</div>
+
+
 </app-layout>

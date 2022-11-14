@@ -4,4 +4,12 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html'
 })
-export class AppComponent {}
+export class AppComponent {
+  active = false;
+
+  toggle() {
+    setTimeout(() => {
+      this.active = !this.active;
+    }, 2000);
+  }
+}
