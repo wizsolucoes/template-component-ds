@@ -1,20 +1,55 @@
 <section>
-    <h1 class="mb-4">Inputs</h1>
-    <p class="mt-4 mb-2">Default</p>
-    <input class="input" type="text">
+  <h1 class="mb-4">Inputs</h1>
 
-    <p class="mt-4 mb-2">Disabled</p>
-    <input class="input" type="text" value="whatever" disabled>
+  <p class="mt-4 mb-2">Default</p>
+  <input class="input" type="text" placeholder="test">
 
-    <p class="mt-4 mb-2">Read only</p>
-    <input class="input" type="text" value="whatever" readonly>
+  <p class="mt-4 mb-2">Disabled</p>
+  <input class="input" type="text" value="whatever" disabled>
 
-    <p class="mt-4 mb-2">Error (obs.: validate low case)</p>
-    <input class="input" type="text" value="abcD" pattern="[a-z]+">
+  <p class="mt-4 mb-2">Read only</p>
+  <input class="input" type="text" value="whatever" readonly>
 
-    <div class="mt-2 did-floating-label-content">
-        <input class="input did-floating-input" type="text" placeholder=" ">
-        <label class="did-floating-label">Sale Price</label>
-      </div>
+  <p class="mt-4 mb-2">Error</p>
+  <input class="input" type="text" value="abcD" pattern="[a-z]+">
+
+
+  <p class="mt-4 mb-2">Floating label</p>
+  <div class="field-wrapper">
+    <input class="input" placeholder="placeholder" type="text" />
+    <label> label</label>
+  </div>
+
+  <p class="mt-4 mb-2">Floating label required</p>
+  <div class="field-wrapper">
+    <input class="input" placeholder="placeholder" type="text" required />
+    <label> label</label>
+  </div>
+
+
+  <p class="mt-4 mb-2">Suffixe</p>
+  <div class="field-wrapper field-wrapper__group-suffixe">
+    <input class="input" placeholder="placeholder" type="text" />
+    <label>label</label>
+    <span class="material-icons suffixe">search</span>
+  </div>
+
+
+  <p class="mt-4 mb-2">Textarea</p>
+  <div class="field-wrapper">
+    <textarea class="input" name="" id="" placeholder="placeholder"></textarea>
+    <label>label</label>
+  </div>
+
+
+  <p class="mt-4 mb-2">Select</p>
+  <div class="field-wrapper">
+    <select class="input" name="" id="" value="">
+      <option value="">default</option>
+      <option value="1">test</option>
+      <option value="2">test2</option>
+    </select>
+    <label>label</label>
+  </div>
+
 </section>
-

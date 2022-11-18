@@ -1,32 +1,36 @@
 .input {
-    border: 1px solid #C1C3C5;
-    border-radius: 4px;
-    // height: 56px;
+    --input-radius: 4px;
+    --input-color-error: #E00707;
+    --input-default-color: #004E87;
+    border: 1px solid var(--fnx-color-digital-grayscale-light);
+    border-radius: var(--input-radius);
     font-size: 16px;
     padding: 16px;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
-    color: #003E6C;
-
+    color: #212223;
+    outline: none;
+    width: 100%;
 
     // native effects
     &:invalid {
-        border: 1px solid #E00707;
-        color: #E00707;
+        border: 1px solid var(--input-color-error);
+        color: var(--input-color-error);
 
         &:focus {
-            outline: 2px solid #E00707;
+            outline: 2px solid var(--input-color-error);
         }
     }
 
-    &:hover:not(:disabled):not(:invalid):not(:read-only) {
-        border: 1px solid #004E87;
+    &:hover:not(:focus):not(:disabled):not(:invalid):not(:read-only) {
+        border: 1px solid var(--input-default-color);
     }
 
     &:focus:not(:disabled):not(:invalid) {
-        outline: 2px solid #004E87;
+        outline: 2px solid var(--input-default-color);
+        border: 1px solid var(--input-default-color);
     }
 
     &:disabled {
@@ -35,7 +39,7 @@
         color: #6F7276;
     }
 
-    &:read-only:not(:disabled) {
+    &:read-only:not(:disabled):not(select) {
         background: #EAEBEB;
         border: 1px solid #C1C3C5;
         color: #6F7276;
@@ -47,51 +51,62 @@
 }
 
 
-
-.did-floating-label-content {
+.field-wrapper {
+    display: flex;
     position: relative;
-    margin-bottom: 20px;
 
-    .did-floating-label {
-        color: #1e4c82;
-        font-size: 13px;
-        font-weight: normal;
+    input:required+label::after,
+    input:invalid:required+label {
+        content: " *";
+        color: var(--input-default-color);
+    }
+
+    label {
         position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: white;
+        // background: linear-gradient(0deg, rgb(255, 255, 255) 46%, rgba(0, 212, 255, 0) 24%);
+        color: var(--input-default-color);
+        padding: 0 4px;
+        margin-left: 20px;
+        transition: 0.1s ease-out;
+        transform-origin: left top;
         pointer-events: none;
-        left: 15px;
-        top: 11px;
-        padding: 0 5px;
-        background: white;
-        transition: 0.2s ease all;
-        // -moz-transition: 0.2s ease all;
-        // -webkit-transition: 0.2s ease all;
     }
 
-    .did-floating-input {
-        font-size: 12px;
-        display: block;
-        width: 100%;
-        height: 36px;
-        padding: 0 20px;
-        background: #fff;
-        color: #323840;
-        border: 1px solid #3D85D8;
-        border-radius: 4px;
-        box-sizing: border-box;
+    select:focus+label,
+    textarea:focus+label,
+    input:focus+label {
+        color: var(--input-default-color);
+        top: 0;
+        transform: translateY(-50%) scale(0.9) !important;
+    }
 
-        &:focus {
-            outline: none;
+    select[value=""]:valid~label,
+    textarea:not(:placeholder-shown)+label,
+    input:not(:placeholder-shown)+label {
+        top: 0;
+        transform: translateY(-50%) scale(0.9) !important;
+    }
 
-            ~.did-floating-label {
-                top: -8px;
-                font-size: 13px;
-            }
+    textarea:not(:focus)::placeholder,
+    input:not(:focus)::placeholder {
+        opacity: 0;
+    }
+
+    &__group-suffixe {
+        .suffixe {
+            position: absolute;
+            top: 50%;
+            right: 12px;
+            transform: translateY(-50%);
         }
-    }
 
-    .did-floating-input:not(:placeholder-shown)~.did-floating-label {
-        top: -8px;
-        font-size: 13px;
+        input {
+            padding-right: 44px;
+        }
     }
 
 }
