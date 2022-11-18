@@ -1,0 +1,38 @@
+.upload {
+  --color-button: var(--fnx-color-digital-secondary03-darkest);
+
+  border: 2px dashed #c1c3c5;
+
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+
+  .upload__drop-info {
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .upload__button {
+    display: inherit;
+    justify-content: center;
+    gap: 8px;
+    border-bottom: 3px solid var(--color-button);
+    padding: 10px 0;
+
+    span,
+    label {
+      color: var(--color-button);
+      cursor: pointer;
+    }
+  }
+
+  .upload__file {
+    display: none;
+  }
+}

@@ -3,7 +3,13 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+
+  azureBlob: {
+    url: "https://smartinsurehmlstg.blob.core.windows.net/assets",
+    access:
+      "?sp=racwdli&st=2022-09-12T15:55:36Z&se=2025-01-01T23:55:36Z&sv=2021-06-08&sr=c&sig=uyvt0nefee9o8TSMx1rBsCZlSGBhr31KjERLORXNtGI%3D",
+  },
 };
 
 /*

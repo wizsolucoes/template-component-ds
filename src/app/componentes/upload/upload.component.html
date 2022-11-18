@@ -1,0 +1,12 @@
+<div class="upload" appUpload (fileDropped)="onFileDropped($event)">
+  <div class="upload__drop-info">
+    <span>Arraste-os aqui ou</span>
+    <div class="upload__button">
+      <span class="material-icons">cloud_upload</span>
+      <label for="file">Selecione arquivos</label>
+    </div>
+  </div>
+  <span class="upload__info">(XX MB de tamanho máximo e é permitido qualquer tipo de arquivos)</span>
+
+  <input class="upload__file" type="file" name="file" id="file" (change)="fileBrowseHandler($event)">
+</div>
