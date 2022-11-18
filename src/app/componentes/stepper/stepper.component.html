@@ -1,0 +1,41 @@
+<div
+  class="stepper-vertical"
+  [ngClass]="isVertical === true ? 'stepper-vertical' : 'stepper-horizontal'"
+  *ngIf="stepperArray"
+>
+  <div class="stepper-component" *ngFor="let items of stepperArray">
+    <div class="stepper-component__main">
+      <div class="stepper-item">
+        <span
+          [ngClass]="
+            items.showLineStart === true
+              ? 'stepper-item__line'
+              : 'stepper-item__without-line'
+          "
+        ></span>
+        <span class="stepper-item__circle" [ngClass]="items.className"
+          ><span *ngIf="items.type === 'icon'" class="icon material-icons">{{
+            items.valueIcon
+          }}</span>
+          <span *ngIf="items.type === 'text'" class="icon">{{
+            items.valueBullet
+          }}</span></span
+        >
+        <span
+          [ngClass]="
+            items.showLineEnd === true
+              ? 'stepper-item__line'
+              : 'stepper-item__without-line'
+          "
+        ></span>
+      </div>
+      <div class="stepper-label">
+        <span
+          class="stepper-label__text"
+          [ngClass]="items.className === 'current' ? 'dark-text' : 'light-text'"
+          >{{ items.label }}</span
+        >
+      </div>
+    </div>
+  </div>
+</div>

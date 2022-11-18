@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './componentes/layout/layout.component';
+import { StepperComponent } from './componentes/stepper/stepper.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    StepperComponent
   ],
   imports: [
     BrowserModule,
