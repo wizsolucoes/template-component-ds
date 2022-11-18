@@ -1,8 +1,14 @@
 <section>
   <h1 class="mb-4">Inputs</h1>
 
-  <p class="mt-4 mb-2">Default</p>
-  <input class="input" type="text" placeholder="test">
+  <p class="mt-4 mb-2">Default (Large)</p>
+  <input class="input" type="text" placeholder="placeholder">
+
+  <p class="mt-4 mb-2">Medium</p>
+  <input class="input input-md" type="text" placeholder="placeholder">
+
+  <p class="mt-4 mb-2">Small</p>
+  <input class="input input-sm" type="text" placeholder="placeholder">
 
   <p class="mt-4 mb-2">Disabled</p>
   <input class="input" type="text" value="whatever" disabled>
@@ -28,9 +34,17 @@
 
 
   <p class="mt-4 mb-2">Suffixe</p>
-  <div class="field-wrapper field-wrapper__group-suffixe">
+  <div class="field-wrapper field-wrapper__group--suffixe">
     <input class="input" placeholder="placeholder" type="text" />
     <label>label</label>
+    <span class="material-icons suffixe">search</span>
+  </div>
+
+  <p class="mt-4 mb-2">Prefixe / Suffixe</p>
+  <div class="field-wrapper field-wrapper__group--prefixe field-wrapper__group--suffixe">
+    <input class="input" placeholder="placeholder" type="text" />
+    <label>label</label>
+    <span class="material-icons prefixe">account_circle</span>
     <span class="material-icons suffixe">search</span>
   </div>
 
@@ -44,8 +58,8 @@
 
   <p class="mt-4 mb-2">Select</p>
   <div class="field-wrapper">
-    <select class="input" name="" id="" value="">
-      <option value="">default</option>
+    <select class="input" name="" id="" value="5">
+      <option>Selecione</option>
       <option value="1">test</option>
       <option value="2">test2</option>
     </select>
