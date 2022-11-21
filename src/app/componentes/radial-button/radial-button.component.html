@@ -1,0 +1,7 @@
+<div class="container" *ngFor="let selector of listRadio; let i = index">
+    <div class="radio" (click)='selectType(selector.value);' [class.active]='selector.value === value'>
+        <input id="{{selector.texto+'-'+i}}" [value]="selector.value" [checked]="selector.value" name="radio"
+            type="radio" [disabled]="selector.isDisabeld">
+        <label for="{{selector.texto+'-'+i}}" class="radio-label">{{selector.texto}}</label>
+    </div>
+</div>
