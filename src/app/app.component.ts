@@ -21,19 +21,11 @@ export class AppComponent {
       texto: "Desabilitado Desmarcado",
       value: false,
       isDisabeld: false,
-      tipo: false,
     },
     {
       texto: "Desabilitado Marcado",
       value: true,
       isDisabeld: true,
-      tipo: false,
-    },
-    {
-      texto: "Hover",
-      value: false,
-      isDisabeld: false,
-      tipo: true,
     },
   ];
   toggle() {
